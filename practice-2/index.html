@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <script src="angular.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body ng-controller="myController">
+    <h1>lowercase filter</h1>
+    {{str | lowercase}}<br>
+    <h1>Uppercase filter</h1>
+    {{str | uppercase}}<br>
+    <h1>Number filter</h1>
+    {{value | number:6}}<br>
+    <h1>Currency filter</h1>
+    {{value | currency:"RS:-"}}<br>
+    <h1>Date filter</h1>
+    {{value | date: "+dd/mm/yyyy"}}<br>
+    {{order_datetime | date:"M"}}<br>
+    {{order_datetime}}<br>
+    <h1>Limitto filter</h1>
+    <ul>
+        <li ng-repeat="x in cars | limitTo : 3">{{x}}</li>
+    </ul>
+</body>
+</html>
